@@ -166,7 +166,7 @@ class CDesktop : public CGroup {
     };
 
     void paint()
-    {
+    {	
         for (int i = geom.topleft.y; i < geom.topleft.y + geom.size.y; i++) {
             gotoyx(i, geom.topleft.x);
             for (int j = 0; j < geom.size.x; j++)
@@ -187,7 +187,7 @@ class CDesktop : public CGroup {
         refresh();
         while (1) {
             c = getEvent();
-            if (c == 27)
+            if (c == 'q' || c == 'Q')
                 break;
             if (handleEvent(c)) {
                 paint();

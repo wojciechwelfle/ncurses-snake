@@ -3,11 +3,22 @@
 
 #include "winsys.h"
 
-class CSnake:public CFramedWindow
-{
-public:
-  CSnake(CRect r, char _c = ' ');
+class CSnake : public CFramedWindow {
+  private:
+	int level;
+	bool running;
+	
+	void paintLevel();
+	void paintWindow();
+	void paintInfo();
+	
+  public:
+	CSnake(CRect r, char _c = ' ');
 
+	void paint();
+	
+	void reset();
+	
 };
 
 #endif
