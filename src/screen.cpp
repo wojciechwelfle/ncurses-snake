@@ -1,6 +1,8 @@
 /* screen.cpp */
 #include "screen.h"
 
+#define MAX_LINE 255
+
 void init_screen()
 {
     initscr();
@@ -32,3 +34,4 @@ void getscreensize(int& y, int& x)
 {
     getmaxyx(stdscr, y, x);
 }
+
